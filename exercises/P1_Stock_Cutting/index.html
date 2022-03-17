@@ -1,0 +1,1176 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.4">
+    
+    
+      
+        <title>Finding Good Patterns - Deka</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bb3983ee.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+      <link rel="stylesheet" href="../../styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-114664473-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stock-cutting-part-1-finding-good-patterns" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Deka" class="md-header__button md-logo" aria-label="Deka" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Deka
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Finding Good Patterns
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Deka" class="md-nav__button md-logo" aria-label="Deka" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Deka
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Solutions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Solutions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Solutions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/SOLN_P1_Stock_Cutting/" class="md-nav__link">
+        Finding Good Patterns
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Exercises
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Exercises
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Finding Good Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Finding Good Patterns
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-what-is-the-knapsack-problem" class="md-nav__link">
+    1.0: What is the knapsack Problem?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-simple-knapsack" class="md-nav__link">
+    1.2: Simple Knapsack
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2: Simple Knapsack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-use-recursion-to-find-the-optimum-value-of-the-knapsack" class="md-nav__link">
+    1.2.1 Use recursion to find the optimum value of the knapsack
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.1 Use recursion to find the optimum value of the knapsack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-create-the-empty-table-as-a-list-of-lists" class="md-nav__link">
+    🎒 Exercise 1: Create the empty table as a list of lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-complete-the-function-knapsack-using-recursion-without-memoization" class="md-nav__link">
+    🎒 Exercise 2: Complete the function knapsack using recursion without memoization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-enrichment-use-memoization-to-speed-up-the-solution" class="md-nav__link">
+    1.2.2 Enrichment: use memoization to speed up the solution
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.2 Enrichment: use memoization to speed up the solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-check-if-we-have-already-visited-a-location-in-the-table" class="md-nav__link">
+    🎒 Exercise 3: Check if we have already visited a location in the table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-reconstruct-what-items-were-added-to-the-knapsack-by-reading-the-table" class="md-nav__link">
+    1.2.3 Reconstruct what items were added to the knapsack by reading the table
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.3 Reconstruct what items were added to the knapsack by reading the table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-complete-the-pseudo-code-below-to-create-a-set-that-includes-all-the-items-in-the-knapsack" class="md-nav__link">
+    🎒 Exercise 4: Complete the pseudo code below to create a set that includes all the items in the knapsack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-5-wrap-this-in-a-function-called-reconstruct" class="md-nav__link">
+    🎒 Exercise 5: Wrap this in a function called reconstruct
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-unit-tests" class="md-nav__link">
+    1.3 Unit Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-save-our-functions" class="md-nav__link">
+    1.4 Save our functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-lab" class="md-nav__link">
+    1.5 Lab
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-what-is-the-knapsack-problem" class="md-nav__link">
+    1.0: What is the knapsack Problem?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-simple-knapsack" class="md-nav__link">
+    1.2: Simple Knapsack
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2: Simple Knapsack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-use-recursion-to-find-the-optimum-value-of-the-knapsack" class="md-nav__link">
+    1.2.1 Use recursion to find the optimum value of the knapsack
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.1 Use recursion to find the optimum value of the knapsack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-1-create-the-empty-table-as-a-list-of-lists" class="md-nav__link">
+    🎒 Exercise 1: Create the empty table as a list of lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-2-complete-the-function-knapsack-using-recursion-without-memoization" class="md-nav__link">
+    🎒 Exercise 2: Complete the function knapsack using recursion without memoization
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-enrichment-use-memoization-to-speed-up-the-solution" class="md-nav__link">
+    1.2.2 Enrichment: use memoization to speed up the solution
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.2 Enrichment: use memoization to speed up the solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-3-check-if-we-have-already-visited-a-location-in-the-table" class="md-nav__link">
+    🎒 Exercise 3: Check if we have already visited a location in the table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-reconstruct-what-items-were-added-to-the-knapsack-by-reading-the-table" class="md-nav__link">
+    1.2.3 Reconstruct what items were added to the knapsack by reading the table
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2.3 Reconstruct what items were added to the knapsack by reading the table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-complete-the-pseudo-code-below-to-create-a-set-that-includes-all-the-items-in-the-knapsack" class="md-nav__link">
+    🎒 Exercise 4: Complete the pseudo code below to create a set that includes all the items in the knapsack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-5-wrap-this-in-a-function-called-reconstruct" class="md-nav__link">
+    🎒 Exercise 5: Wrap this in a function called reconstruct
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-unit-tests" class="md-nav__link">
+    1.3 Unit Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-save-our-functions" class="md-nav__link">
+    1.4 Save our functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-lab" class="md-nav__link">
+    1.5 Lab
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<p><a href="https://colab.research.google.com/github/wesleybeckner/deka/blob/main/notebooks/exercises/P1_Stock_Cutting.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<h1 id="stock-cutting-part-1-finding-good-patterns">Stock Cutting Part 1:<br> Finding Good Patterns<a class="headerlink" href="#stock-cutting-part-1-finding-good-patterns" title="Permanent link">&para;</a></h1>
+<p><br></p>
+<hr />
+<p><br></p>
+<p>In this project notebook we'll be laying the foundations of stock cutting. We'll begin by discussing the common dynamic programming problem: the knapsack problem</p>
+<p><br></p>
+<hr />
+<h2 id="10-what-is-the-knapsack-problem">1.0: What is the knapsack Problem?<a class="headerlink" href="#10-what-is-the-knapsack-problem" title="Permanent link">&para;</a></h2>
+<p align=center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Knapsack.svg/500px-Knapsack.svg.png"></img>
+</p>
+
+<p><strong>From Wikipedia</strong>:</p>
+<p>The knapsack problem is a problem in combinatorial optimization: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible. It derives its name from the problem faced by someone who is constrained by a fixed-size knapsack and must fill it with the most valuable items. The problem often arises in resource allocation where the decision makers have to choose from a set of non-divisible projects or tasks under a fixed budget or time constraint, respectively.</p>
+<h2 id="12-simple-knapsack">1.2: Simple Knapsack<a class="headerlink" href="#12-simple-knapsack" title="Permanent link">&para;</a></h2>
+<p>Say we have the following items we want to fit into a bag. Our total weight limit is 8 lbs. The items are worth 1, 2, 5, and 6 dollars apiece and weigh 2, 3, 4, and 5 lbs.</p>
+<div class="codehilite"><pre><span></span><code>val = [1, 2, 5, 6]
+wt = [2, 3, 4, 5]
+W = 8
+</code></pre></div>
+
+<p>We may be able to solve in our own minds that the maximum value here is items of value 2 and 6 for a total value of 8 dollars and total weight of 8 lbs. How do we solve this algorithmically?</p>
+<div class="codehilite"><pre><span></span><code><span class="n">val</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">wt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">W</span> <span class="o">=</span> <span class="mi">8</span>
+</code></pre></div>
+
+<p>the table we would fill out looks like the following</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Weight</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>None</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>5</td>
+<td>5</td>
+<td>6</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>5</td>
+<td>6</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>The column headers (after Value and Weight) indicate the maximum <em>weight</em> allowable under that column. Every row indicates what <em>items</em> are allowable i.e. on row 2 we only consider item 1, on row 3 we consider items 1 <em>and</em> 2, and so forth. </p>
+<p>Let's walk through a few cells.</p>
+<ol>
+<li>In the first two columns, we can't include any items under this weight restriction, hence all cell values are 0. </li>
+<li>In column 2, row 2, we are able to fit item 1 under this weight constraint, so the value of our knapsack increases to 1</li>
+<li>In the remaining cells of row 2, our value is persistant at a total of 1, since we are only considering the first item in this row</li>
+<li>Moving onto the second row, things get interesting at row 3, column 3<ol>
+<li>if n is our current item, and w is the current weight (i.e. n is the row and w is the column)</li>
+<li>then we want to fill in the current cell <code>t[n,w]</code> with the maximum value: <code>t[n-1,w]</code> or <code>t[n-1, W-wt[n]] + val[n]</code></li>
+</ol>
+</li>
+</ol>
+<p>Let's make sense of the <code>max</code> statement in 4.B. We know that at the current cell, we can always default to the value of the cell above (<code>t[n-1,w]</code>). The trick comes in the second part of the <code>max</code> statement. We look at the total value if we were to add the current item (<code>val[n]</code>), to the value back in the table in the previous row <code>[n-1]</code> where the total weight is equal to the current weight under consideration minus the weight of the current item (<code>W-wt[n]</code>)</p>
+<p>Now we'll go into our second point. Take a look at row 4, column 3 (directly below the cell we were considering before) in this case, the weight of the current item (4 lbs) is more than the maximum allowable weight (3 lbs) and so in this case we default to the value in the cell above (<code>t[n-1, w]</code>)</p>
+<p>algorithmically this looks like the following:</p>
+<div class="codehilite"><pre><span></span><code>if wt[n] &lt;= W:
+        return max(t[n-1,w], t[n-1, W-wt[n]] + val[n])
+
+elif wt[n] &gt; W:
+    return t[n-1, w]
+</code></pre></div>
+
+<h3 id="121-use-recursion-to-find-the-optimum-value-of-the-knapsack">1.2.1 Use recursion to find the optimum value of the knapsack<a class="headerlink" href="#121-use-recursion-to-find-the-optimum-value-of-the-knapsack" title="Permanent link">&para;</a></h3>
+<p>The insight we require is that in the above code block, we want to run this conditional on the bottom right corner of the table, where we have allowed the maximum possible weight in the bag and included all items for consideration. But in order to ask this we need to know the values in the preceding cells of the table! This is where <em>recurssion</em> comes in handy. Our recursive algorithm will return <code>t[n][w]</code> for the given parameters of <code>wt</code> (weights), <code>val</code> (values), <code>W</code> (max allowable weight), and, well <code>t</code>, the table itself.</p>
+<h4 id="exercise-1-create-the-empty-table-as-a-list-of-lists">🎒 Exercise 1: Create the empty table as a list of lists<a class="headerlink" href="#exercise-1-create-the-empty-table-as-a-list-of-lists" title="Permanent link">&para;</a></h4>
+<p>Before writing the knapsack function, we will need to initialize our empty table:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># We initialize the table. note that I am adding a 0th row and a 0th column</span>
+<span class="c1"># at the top and left of the table respectively. The table</span>
+<span class="c1"># needs to be len(val) + 1 rows and W + 1 columns</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>[[None, None, None, None, None, None, None, None, None],
+ [None, None, None, None, None, None, None, None, None],
+ [None, None, None, None, None, None, None, None, None],
+ [None, None, None, None, None, None, None, None, None],
+ [None, None, None, None, None, None, None, None, None]]
+</code></pre></div>
+
+<p>after you've propery coded out the table wrap this into a function <code>initt</code></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># we&#39;ll wrap the above into a function for ease of use</span>
+<span class="k">def</span> <span class="nf">initt</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+    <span class="k">pass</span>
+</code></pre></div>
+
+<h4 id="exercise-2-complete-the-function-knapsack-using-recursion-without-memoization">🎒 Exercise 2: Complete the function <code>knapsack</code> using recursion without memoization<a class="headerlink" href="#exercise-2-complete-the-function-knapsack-using-recursion-without-memoization" title="Permanent link">&para;</a></h4>
+<p>Note that we need to think about how our indexing will work between the table, <code>t</code>, and our list representations of our items, <code>wt</code> and <code>val</code>. index 0 in our table means <em>no items</em> and <em>no weight</em> whereas in our list index 0 reprents <em>item 1</em> so in the following knapsack function we need to shift all our indexing's of <code>wt</code> and <code>val</code> backwards by 1 (this is the difference between the code in the function and the mathematical representation in Section 1.2)</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">knapsack</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="c1"># n, w will be the row, column of our table</span>
+    <span class="c1"># solve the basecase. </span>
+    <span class="k">if</span> <span class="n">w</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="c1"># now include the conditionals</span>
+    <span class="k">if</span> <span class="n">wt</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">w</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">elif</span> <span class="n">wt</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">w</span><span class="p">:</span>
+        <span class="k">pass</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">knapsack</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>8
+</code></pre></div>
+
+<p>If we look at the output of our table, we will see that it matches the one we described in Section 1.2</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Weight</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>None</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>5</td>
+<td>5</td>
+<td>6</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>5</td>
+<td>6</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>it turns out that we did not have to visit every cell in the table however, to arrive at the optimal value of our knapsack:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">t</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>[[None, None, None, None, None, None, None, None, None],
+ [None, 0, None, 1, 1, 1, None, None, 1],
+ [None, None, None, 2, 2, None, None, None, 3],
+ [None, None, None, 2, None, None, None, None, 7],
+ [None, None, None, None, None, None, None, None, 8]]
+</code></pre></div>
+
+<h3 id="122-enrichment-use-memoization-to-speed-up-the-solution">1.2.2 Enrichment: use memoization to speed up the solution<a class="headerlink" href="#122-enrichment-use-memoization-to-speed-up-the-solution" title="Permanent link">&para;</a></h3>
+<p>Memoization is a techniqued used along with recursion to create <em>dynamic programms</em>. We let our recursive algorithm know when we've already visited a subproblem by passing along a table (which in this case, we already have)</p>
+<h4 id="exercise-3-check-if-we-have-already-visited-a-location-in-the-table">🎒 Exercise 3: Check if we have already visited a location in the table<a class="headerlink" href="#exercise-3-check-if-we-have-already-visited-a-location-in-the-table" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">knapsack</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="c1"># n, w will be the row, column of our table</span>
+    <span class="c1"># solve the basecase. </span>
+    <span class="k">if</span> <span class="n">w</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="k">elif</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="c1"># now include the conditionals</span>
+    <span class="k">if</span> <span class="n">wt</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">w</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">elif</span> <span class="n">wt</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">w</span><span class="p">:</span>
+        <span class="k">pass</span>
+</code></pre></div>
+
+<h3 id="123-reconstruct-what-items-were-added-to-the-knapsack-by-reading-the-table">1.2.3 Reconstruct what items were added to the knapsack by reading the table<a class="headerlink" href="#123-reconstruct-what-items-were-added-to-the-knapsack-by-reading-the-table" title="Permanent link">&para;</a></h3>
+<p>The next part of the puzzle is to determine what items were added to the knapsack to achieve this optimal result! We can infer this from the table. Take a look at the table again, the algorithm we will envoke is that if the current cell's value does not appear in the previous row, it is because added that row's item! To see what else is in that hypothetical knapsack, we simply move up a row and left the number of columns equal to the last item we added, and repeat the process</p>
+<h4 id="exercise-4-complete-the-pseudo-code-below-to-create-a-set-that-includes-all-the-items-in-the-knapsack">🎒 Exercise 4: Complete the pseudo code below to create a <code>set</code> that includes all the items in the knapsack<a class="headerlink" href="#exercise-4-complete-the-pseudo-code-below-to-create-a-set-that-includes-all-the-items-in-the-knapsack" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="n">recon</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">column</span> <span class="o">=</span> <span class="n">W</span>
+<span class="c1"># we will iterate through the rows of the table from bottom to top</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="c1"># we know that if the current cell value is not anywhere in the</span>
+    <span class="c1"># previous row, it is because we added that item to the knapsack</span>
+    <span class="c1"># remember that the table indexing is shifted forward compared to</span>
+    <span class="c1"># the list indexes</span>
+    <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">column</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">t</span><span class="p">[</span><span class="n">row</span><span class="p">]:</span>
+
+        <span class="c1"># after we add the item, we need to adjust the weight the appropriate</span>
+        <span class="c1"># number of steps</span>
+
+
+        <span class="c1"># we will stop after we reach the 0th (no weight) column</span>
+        <span class="k">if</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+<span class="n">recon</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>{1, 3}
+</code></pre></div>
+
+<h4 id="exercise-5-wrap-this-in-a-function-called-reconstruct">🎒 Exercise 5: Wrap this in a function called <code>reconstruct</code><a class="headerlink" href="#exercise-5-wrap-this-in-a-function-called-reconstruct" title="Permanent link">&para;</a></h4>
+<p>we see that the output of the reconstruction are the second and fourth items (index starts at 0), which is what we expected! Let's package this into a function</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">reconstruct</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">wt</span><span class="p">):</span>
+    <span class="n">recon</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">W</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+
+        <span class="k">if</span> <span class="n">W</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">recon</span>
+</code></pre></div>
+
+<p>Now, to translate these indices to actual items we're going to use a function called <em>Counter</em></p>
+<blockquote>
+<p>Dict subclass for counting hashable items.  Sometimes called a bag
+or multiset.  Elements are stored as dictionary keys and their counts
+are stored as dictionary values.</p>
+</blockquote>
+<p>We'll use Counter along with Numpy to take our indices/val list and count the number of times an item was used in the solution</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">sack</span> <span class="o">=</span> <span class="n">reconstruct</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">),</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">val</span><span class="p">)[</span><span class="nb">list</span><span class="p">(</span><span class="n">sack</span><span class="p">)])</span>
+<span class="n">pattern</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>Counter({2: 1, 6: 1})
+</code></pre></div>
+
+<h2 id="13-unit-tests">1.3 Unit Tests<a class="headerlink" href="#13-unit-tests" title="Permanent link">&para;</a></h2>
+<p>It is always good practice to test as we go. Let's make sure our algorithm works on some known subproblems</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">test_small_bag</span><span class="p">():</span>
+    <span class="c1"># the problem parameters</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+    <span class="n">wt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+    <span class="n">W</span> <span class="o">=</span> <span class="mi">5</span>
+
+    <span class="c1"># the known solution</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="mi">80</span>
+    <span class="n">max_items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="n">initt</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+    <span class="n">best</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">sack</span> <span class="o">=</span> <span class="n">reconstruct</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">),</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">val</span><span class="p">)[</span><span class="nb">list</span><span class="p">(</span><span class="n">sack</span><span class="p">)])</span>
+
+    <span class="k">assert</span> <span class="n">best</span> <span class="o">==</span> <span class="n">max_val</span><span class="p">,</span> <span class="s2">&quot;Optimal value not found&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Optimal value found&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">pattern</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">==</span> <span class="n">max_items</span><span class="p">,</span> <span class="s2">&quot;Optimal items not found&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Optimal items found&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">test_small_bag</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>Optimal value found
+Optimal items found
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">test_val_weight_equality</span><span class="p">():</span>
+    <span class="c1"># the problem parameters</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">wt</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+    <span class="n">W</span> <span class="o">=</span> <span class="mi">14</span>
+
+    <span class="c1"># the known solution</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">max_items</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="n">initt</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+    <span class="n">best</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">sack</span> <span class="o">=</span> <span class="n">reconstruct</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">),</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">wt</span><span class="p">)</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">val</span><span class="p">)[</span><span class="nb">list</span><span class="p">(</span><span class="n">sack</span><span class="p">)])</span>
+
+    <span class="k">assert</span> <span class="n">best</span> <span class="o">==</span> <span class="n">max_val</span><span class="p">,</span> <span class="s2">&quot;Optimal value not found&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Optimal value found&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">pattern</span> <span class="o">==</span> <span class="n">max_items</span><span class="p">,</span> <span class="s2">&quot;Optimal items not found&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Optimal items found&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">test_val_weight_equality</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>Optimal value found
+Optimal items found
+</code></pre></div>
+
+<h2 id="14-save-our-functions">1.4 Save our functions<a class="headerlink" href="#14-save-our-functions" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="k">def</span> <span class="nf">knapsack</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    in our particular case, the wt and val of the item are the same</span>
+<span class="sd">    wt/val is &#39;s&#39; and is the items sorted by length, increasing</span>
+<span class="sd">    wt: list</span>
+<span class="sd">        the ordered weights (lengths of the rolls)</span>
+<span class="sd">    val: list</span>
+<span class="sd">        the ordered values (lengths of the rolls)</span>
+<span class="sd">    W: int</span>
+<span class="sd">        the weight of the current knapsack (the used length of the mother roll)</span>
+<span class="sd">    n: int</span>
+<span class="sd">        the number of items in the mother roll</span>
+<span class="sd">    t: list of list</span>
+<span class="sd">        the knapsack table</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># base conditions</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">W</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># the first row and first column of the table is filled with 0s</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">W</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> 
+        <span class="c1"># already solved at [n][W]</span>
+        <span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">W</span><span class="p">]</span>
+
+    <span class="c1"># choice diagram code</span>
+    <span class="k">if</span> <span class="n">wt</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">W</span><span class="p">:</span>
+        <span class="c1"># if the previous item under consideration is less than the current</span>
+        <span class="c1"># weight left in the mother roll</span>
+
+        <span class="c1"># we can now do 1 of 2 things add the new item in (and take the val</span>
+        <span class="c1"># of the bag at the previous lvl w/o the item) (the answer to the left</span>
+        <span class="c1"># in the table) plus the new wt/val or we use the best answer from one</span>
+        <span class="c1"># fewer items at this weight lvl (the answer above the current cell in</span>
+        <span class="c1"># the table)</span>
+        <span class="c1"># t[n,w] = max{t[n-1,w], t[n-1, w-w[n-1]] + val[n-1]}</span>
+        <span class="c1"># note that in the following wt and val are indexed starting at 0</span>
+        <span class="c1"># but t/knapsack is indexed starting at 1 (index 0 in the table is all</span>
+        <span class="c1"># 0&#39;s)</span>
+        <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">W</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span>
+            <span class="n">val</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">knapsack</span><span class="p">(</span>
+            <span class="n">wt</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">W</span><span class="o">-</span><span class="n">wt</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">),</span>
+            <span class="n">knapsack</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">W</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">wt</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">W</span><span class="p">:</span>
+        <span class="c1"># if wt/val of the current item under consideration is more than the</span>
+        <span class="c1"># weight left in the bag, we&#39;ve already found the best solution for </span>
+        <span class="c1"># this number of items</span>
+        <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">W</span><span class="p">]</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">wt</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">W</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">initt</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">lens</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    t, the returned table, will be a list of lists, but if transformed to </span>
+<span class="sd">    an array it takes the shape of the number of products + 1 (len(s) + 1) </span>
+<span class="sd">    by the usable width + 1 (B + 1)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># We initialize the matrix with -1 at first.</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">B</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lens</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+
+<span class="k">def</span> <span class="nf">reconstruct</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">wt</span><span class="p">):</span>
+    <span class="n">recon</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">W</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">,:]:</span>
+            <span class="n">recon</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="n">W</span> <span class="o">=</span> <span class="n">W</span> <span class="o">-</span> <span class="n">wt</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1"># move columns in table lookup</span>
+        <span class="k">if</span> <span class="n">W</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">continue</span>
+    <span class="k">return</span> <span class="n">recon</span>
+</code></pre></div>
+
+<h2 id="15-lab">1.5 Lab<a class="headerlink" href="#15-lab" title="Permanent link">&para;</a></h2>
+<p>In the deka repository add our functions to <code>enginge.py</code> and our unit_tests to <code>test_engine.py</code> make sure you can run the tests via the Makefile</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../solutions/SOLN_P1_Stock_Cutting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Finding Good Patterns" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Finding Good Patterns
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.361d90f1.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.289a2a4b.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>
