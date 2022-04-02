@@ -230,14 +230,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -260,8 +258,86 @@
   
   
     <li class="md-nav__item">
-      <a href="../SOLN_P1_Stock_Cutting/" class="md-nav__link">
+      <a href="../../solutions/SOLN_P1_Stock_Cutting/" class="md-nav__link">
         The Knapsack Problem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/SOLN_P2_Stock_Cutting/" class="md-nav__link">
+        Finding More Patterns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/SOLN_P3_Stock_Cutting/" class="md-nav__link">
+        The Column Generation Method
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Exercises
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Exercises
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P1_Stock_Cutting/" class="md-nav__link">
+        Finding Good Patterns
       </a>
     </li>
   
@@ -396,6 +472,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#13-comparison-with-old-alg" class="md-nav__link">
+    1.3 Comparison with old Alg
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -411,83 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SOLN_P3_Stock_Cutting/" class="md-nav__link">
-        The Column Generation Method
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Exercises
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Exercises" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Exercises
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../exercises/P1_Stock_Cutting/" class="md-nav__link">
-        Finding Good Patterns
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../exercises/P2_Stock_Cutting/" class="md-nav__link">
-        Finding More Patterns
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../exercises/P3_Stock_Cutting/" class="md-nav__link">
+      <a href="../P3_Stock_Cutting/" class="md-nav__link">
         The Column Generation Method
       </a>
     </li>
@@ -616,6 +623,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#13-comparison-with-old-alg" class="md-nav__link">
+    1.3 Comparison with old Alg
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -629,7 +643,7 @@
               
                 
 
-<p><a href="https://colab.research.google.com/github/wesleybeckner/deka/blob/main/notebooks/solutions/SOLN_P2_Stock_Cutting.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
+<p><a href="https://colab.research.google.com/github/wesleybeckner/deka/blob/main/notebooks/exercises/P2_Stock_Cutting.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
 <h1 id="stock-cutting-part-2-finding-good-but-not-best-patterns">Stock Cutting Part 2:<br> Finding Good (But not Best) Patterns<a class="headerlink" href="#stock-cutting-part-2-finding-good-but-not-best-patterns" title="Permanent link">&para;</a></h1>
 <p><br></p>
 <hr />
@@ -755,36 +769,12 @@ Optimal items found
 <span class="k">def</span> <span class="nf">knapsack</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
     <span class="c1"># n, w will be the row, column of our table</span>
     <span class="c1"># solve the basecase. </span>
-    <span class="k">if</span> <span class="n">w</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-
-    <span class="k">elif</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">w</span><span class="p">]</span>
-
-    <span class="c1"># now include the conditionals</span>
-    <span class="k">if</span> <span class="n">widths</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">w</span><span class="p">:</span>
-        <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span>
-            <span class="n">knapsack</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">),</span>
-            <span class="n">knapsack</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">w</span><span class="o">-</span><span class="n">widths</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">widths</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">w</span><span class="p">]</span>
-
-    <span class="k">elif</span> <span class="n">widths</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">w</span><span class="p">:</span>
-        <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">t</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">w</span><span class="p">]</span>
+    <span class="k">pass</span>
 </code></pre></div>
 
 <p>Do the same thing for the <code>reconstruct</code> function. And while we're at it, let's change <code>N</code> to <code>n</code> and <code>W</code> to <code>w</code> so that our variables are consistent across both functions</p>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">reconstruct</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">widths</span><span class="p">):</span>
-    <span class="n">recon</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">w</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-            <span class="n">recon</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-            <span class="n">w</span> <span class="o">-=</span> <span class="n">widths</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1"># move columns in table lookup</span>
-        <span class="k">if</span> <span class="n">w</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">break</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">continue</span>
-    <span class="k">return</span> <span class="n">recon</span>
+    <span class="k">pass</span>
 </code></pre></div>
 
 <p>and lets test our new functions</p>
@@ -815,55 +805,38 @@ Optimal items found
 
 <h3 id="exercise-2-call-knapsack-with-a-modified-list-of-widths">🎒 Exercise 2: call knapsack with a modified list of widths<a class="headerlink" href="#exercise-2-call-knapsack-with-a-modified-list-of-widths" title="Permanent link">&para;</a></h3>
 <p>In the above, we created new lists that properly signify the maximum number of units we could fit into the stock width. It is this list of items that we wish to feed into our knapsack problem. Rewrite our call to the knapsack problem below</p>
+<p>Also include neckin when you send this to knapsack</p>
 <div class="codehilite"><pre><span></span><code><span class="n">widths</span> <span class="o">=</span> <span class="p">[</span><span class="mi">170</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="mi">320</span><span class="p">]</span>
+<span class="n">neckin</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 <span class="n">W</span> <span class="o">=</span> <span class="mi">4000</span>
-<span class="n">new</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">widths</span><span class="p">:</span>
-    <span class="n">new</span> <span class="o">+=</span> <span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">W</span><span class="o">/</span><span class="n">w</span><span class="p">)</span>
-<span class="n">widths</span> <span class="o">=</span> <span class="n">new</span>
-
-<span class="n">t</span> <span class="o">=</span> <span class="n">initt</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">widths</span><span class="p">)</span>
-<span class="n">best</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">widths</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
-<span class="n">sack</span> <span class="o">=</span> <span class="n">reconstruct</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">widths</span><span class="p">),</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">widths</span><span class="p">)</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="n">widths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">sack</span><span class="p">)])</span>
-<span class="n">pattern</span>
+<span class="c1"># modify call to knapsack</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>4000
+<div class="codehilite"><pre><span></span><code>3999
 
 
 
 
 
-Counter({170: 12, 280: 7})
+Counter({175: 3, 327: 8, 286: 3})
 </code></pre></div>
 
 <h3 id="exercise-3-report-the-loss">🎒 Exercise 3: report the loss<a class="headerlink" href="#exercise-3-report-the-loss" title="Permanent link">&para;</a></h3>
 <p>As a last adjustment, we want to think of the loss from a pattern, not the total number of millimeters used. Calculate the loss</p>
 <div class="codehilite"><pre><span></span><code><span class="n">widths</span> <span class="o">=</span> <span class="p">[</span><span class="mi">170</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="mi">320</span><span class="p">]</span>
+<span class="n">neckin</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 <span class="n">W</span> <span class="o">=</span> <span class="mi">4000</span>
-<span class="n">new</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">widths</span><span class="p">:</span>
-    <span class="n">new</span> <span class="o">+=</span> <span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">W</span><span class="o">/</span><span class="n">w</span><span class="p">)</span>
-<span class="n">widths</span> <span class="o">=</span> <span class="n">new</span>
-
-<span class="n">t</span> <span class="o">=</span> <span class="n">initt</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">widths</span><span class="p">)</span>
-<span class="n">best</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">widths</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
-<span class="n">loss</span> <span class="o">=</span> <span class="n">W</span> <span class="o">-</span> <span class="n">best</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loss: </span><span class="si">{</span><span class="n">loss</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">sack</span> <span class="o">=</span> <span class="n">reconstruct</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">widths</span><span class="p">),</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">widths</span><span class="p">)</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="n">widths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">sack</span><span class="p">)])</span>
-<span class="n">pattern</span>
+<span class="c1"># modify call to knapsack</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>Loss: 0
+<div class="codehilite"><pre><span></span><code>1
+0.025
 
 
 
 
 
-Counter({170: 12, 280: 7})
+Counter({175: 3, 327: 8, 286: 3})
 </code></pre></div>
 
 <h2 id="12-why-good-but-not-best">1.2: Why good but not best?<a class="headerlink" href="#12-why-good-but-not-best" title="Permanent link">&para;</a></h2>
@@ -871,23 +844,33 @@ Counter({170: 12, 280: 7})
 <p>To over come this hurdle, we combine results from the knapsack problem (and any other pattern generative algorithm we would like to include) with a linear opimization task. We will cover the linear optimization task in a later notebook. Just know for now that we are still working on creating candidate patterns.</p>
 <h3 id="121-find-all-unique-combinations-of-slit-widths">1.2.1 Find all unique combinations of slit widths<a class="headerlink" href="#121-find-all-unique-combinations-of-slit-widths" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="n">widths</span> <span class="o">=</span> <span class="p">[</span><span class="mi">170</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="mi">320</span><span class="p">]</span>
+<span class="n">neckin</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 <span class="n">W</span> <span class="o">=</span> <span class="mi">4000</span>
+<span class="c1"># modify call to knapsack</span>
+<span class="c1"># this new list will represent what we actually send to the function knapsack</span>
 <span class="n">new</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">widths</span><span class="p">:</span>
     <span class="n">new</span> <span class="o">+=</span> <span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">W</span><span class="o">/</span><span class="n">w</span><span class="p">)</span>
 <span class="n">widths</span> <span class="o">=</span> <span class="n">new</span>
-
 <span class="n">t</span> <span class="o">=</span> <span class="n">initt</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">widths</span><span class="p">)</span>
 <span class="n">best</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">widths</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
 <span class="n">loss</span> <span class="o">=</span> <span class="n">W</span> <span class="o">-</span> <span class="n">best</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loss: </span><span class="si">{</span><span class="n">loss</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+<span class="n">percent</span> <span class="o">=</span> <span class="n">loss</span><span class="o">/</span><span class="n">W</span><span class="o">*</span><span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span>
 <span class="n">sack</span> <span class="o">=</span> <span class="n">reconstruct</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">widths</span><span class="p">),</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">widths</span><span class="p">)</span>
 <span class="n">pattern</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="n">widths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">sack</span><span class="p">)])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+<span class="n">pattern</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>Loss: 0
-Counter({170: 12, 280: 7})
+<div class="codehilite"><pre><span></span><code>1
+0.025
+
+
+
+
+
+Counter({175: 3, 327: 8, 286: 3})
 </code></pre></div>
 
 <h3 id="exercise-4-permutate-the-list-of-unique-widths">🎒 Exercise 4: permutate the list of unique widths<a class="headerlink" href="#exercise-4-permutate-the-list-of-unique-widths" title="Permanent link">&para;</a></h3>
@@ -903,17 +886,8 @@ Counter({170: 12, 280: 7})
     <span class="k">for</span> <span class="n">current_max</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_unique_layouts</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">pre_sacks</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">combinations</span><span class="p">(</span><span class="n">_widths</span><span class="p">,</span> <span class="n">current_max</span><span class="p">))</span>
         <span class="k">for</span> <span class="n">widths</span> <span class="ow">in</span> <span class="n">pre_sacks</span><span class="p">:</span>
-            <span class="n">new</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">widths</span><span class="p">:</span>
-                <span class="n">new</span> <span class="o">+=</span> <span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">W</span><span class="o">/</span><span class="n">w</span><span class="p">)</span>
-            <span class="n">widths</span> <span class="o">=</span> <span class="n">new</span>
-
-            <span class="n">t</span> <span class="o">=</span> <span class="n">initt</span><span class="p">(</span><span class="n">W</span><span class="p">,</span> <span class="n">widths</span><span class="p">)</span>
-            <span class="n">best</span> <span class="o">=</span> <span class="n">knapsack</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">widths</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
-            <span class="n">loss</span> <span class="o">=</span> <span class="n">W</span> <span class="o">-</span> <span class="n">best</span>
-            <span class="n">sack</span> <span class="o">=</span> <span class="n">reconstruct</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">widths</span><span class="p">),</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">widths</span><span class="p">)</span>
-            <span class="n">pattern</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">([</span><span class="n">widths</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">sack</span><span class="p">)])</span>
-            <span class="n">patterns</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">pattern</span><span class="p">,</span> <span class="n">loss</span><span class="p">])</span>
+            <span class="c1"># your call to knapsack</span>
+            <span class="k">pass</span>
     <span class="k">return</span> <span class="n">patterns</span>
 </code></pre></div>
 
@@ -935,7 +909,7 @@ Counter({170: 12, 280: 7})
 <span class="n">patterns</span> <span class="o">=</span> <span class="n">seed_patterns</span><span class="p">(</span><span class="n">_widths</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>38 ms ± 1.22 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<div class="codehilite"><pre><span></span><code>69.9 ms ± 5.73 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </code></pre></div>
 
 <h3 id="122-more-permutations">1.2.2 More permutations<a class="headerlink" href="#122-more-permutations" title="Permanent link">&para;</a></h3>
@@ -945,6 +919,154 @@ Counter({170: 12, 280: 7})
 <p>but notice how:</p>
 <p><code>[Counter({320: 9, 280: 4}), 0]</code></p>
 <p>is also a valid solution to fitting the two slit widths on stock. And in fact, the second solution may be one we need to produce our orders in as few stock rolls as possible. We'll come back to this question later on.</p>
+<h2 id="13-comparison-with-old-alg">1.3 Comparison with old Alg<a class="headerlink" href="#13-comparison-with-old-alg" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="o">%%</span><span class="n">timeit</span>
+<span class="n">old_seed_patterns</span><span class="p">(</span><span class="n">_widths</span><span class="p">,</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="n">W</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">_widths</span><span class="p">),</span> <span class="n">verbiose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>717 ms ± 83.2 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">old_seed_patterns</span><span class="p">(</span><span class="n">_widths</span><span class="p">,</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="n">W</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">_widths</span><span class="p">),</span> <span class="n">goal</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">verbiose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>[array([Counter({170: 12, 280: 7}), 0], dtype=object),
+ array([Counter({170: 16, 320: 4}), 0], dtype=object),
+ array([Counter({280: 12, 320: 2}), 0], dtype=object),
+ array([Counter({320: 9, 280: 4}), 0], dtype=object),
+ array([Counter({170: 23}), 90], dtype=object),
+ array([Counter({280: 14}), 80], dtype=object),
+ array([Counter({320: 12}), 160], dtype=object)]
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">old_seed_patterns</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">max_combinations</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">goal</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">verbiose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    creates a number of optimal patterns for deckling</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    w: list</span>
+<span class="sd">        list of widths (int)</span>
+<span class="sd">    q: list</span>
+<span class="sd">        list of rolls for each width (int)</span>
+<span class="sd">    B: int</span>
+<span class="sd">        usuable width per mother roll</span>
+<span class="sd">    n: list</span>
+<span class="sd">        neck in for each width (int)</span>
+<span class="sd">    max_combinations: int, default 3</span>
+<span class="sd">        maximum number of unique products (widths) to have on a mother roll</span>
+<span class="sd">    goal: int, default 3</span>
+<span class="sd">        the desired number of recovered patterns from the knapsack problem</span>
+<span class="sd">        for every unique grouping of unique widths at max_combinations</span>
+<span class="sd">    verbiose: bool, default True</span>
+<span class="sd">        turns on/off print statements during execution</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    patterns: list of lists</span>
+<span class="sd">        list of pattern, loss pairs. Pattern is a dictionary containing a width,</span>
+<span class="sd">        count pair that describes the pattern on the mother roll. Loss is the</span>
+<span class="sd">        percent material loss for the pattern.</span>
+<span class="sd">    layout: list</span>
+<span class="sd">        list of counts for every width on the mother roll. Layout is the best</span>
+<span class="sd">        possible pattern in terms of minimizing mother rolls to create the order</span>
+<span class="sd">        with a single pattern.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># layout = make_best_pattern(q, w, n, B, verbiose=verbiose)</span>
+    <span class="n">combos</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">max_combinations</span><span class="o">+</span><span class="mi">1</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">combos</span> <span class="o">+=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">r</span><span class="o">=</span><span class="n">i</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">verbiose</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> possible max </span><span class="si">{}</span><span class="s2"> combinations&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">combos</span><span class="p">),</span><span class="n">max_combinations</span><span class="p">))</span>
+    <span class="n">patterns</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">combo</span> <span class="ow">in</span> <span class="n">combos</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">combo</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">permutations</span><span class="p">(</span><span class="n">combo</span><span class="p">)):</span>
+            <span class="c1"># due to the naive soln, combos of len 1 should be skipped.</span>
+
+            <span class="c1"># knapsack/store_patterns will only find one solution (0?) if</span>
+            <span class="c1"># the width is over half the length of the bin</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">combo</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">sub_goal</span> <span class="o">=</span> <span class="mi">1</span>
+
+            <span class="c1"># arbitrary conditional</span>
+            <span class="k">elif</span> <span class="nb">sum</span><span class="p">(</span><span class="n">combo</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">B</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">combo</span><span class="p">)):</span>
+                <span class="n">sub_goal</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="c1"># if B / combo[0] &lt; 2:</span>
+                <span class="c1">#     sub_goal = 1</span>
+                <span class="c1"># else:</span>
+                <span class="c1">#     sub_goal = goal</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sub_goal</span> <span class="o">=</span> <span class="n">goal</span>
+            <span class="c1"># only provide knapsack with relevant variables</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">combo</span><span class="p">:</span>
+                <span class="n">s</span> <span class="o">+=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">B</span><span class="o">/</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">t</span> <span class="o">=</span> <span class="n">initt</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">knapsack</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">t</span><span class="p">)</span>
+            <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="n">patterns</span> <span class="o">+=</span> <span class="n">store_patterns</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">goal</span><span class="o">=</span><span class="n">sub_goal</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+                        <span class="n">loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">B</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span> <span class="o">*</span>
+                            <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()))))</span> <span class="o">-</span> <span class="n">key</span>
+                        <span class="k">if</span> <span class="n">loss</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                            <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                            <span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">loss</span>
+    <span class="n">uni_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">uni_list</span><span class="p">:</span>
+            <span class="n">uni_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">patterns</span> <span class="o">=</span> <span class="n">uni_list</span>
+    <span class="n">patterns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">patterns</span><span class="p">)[</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">patterns</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="c1"># the naive patterns should be kept due to their usefullness</span>
+    <span class="c1"># in order fulfilment regardless of loss</span>
+    <span class="c1"># naive = init_layouts(B, w)</span>
+    <span class="c1"># for i in naive:</span>
+    <span class="c1">#     i = [-j for j in i]</span>
+    <span class="c1">#     patterns.append([dict(zip(w,i)),0])</span>
+
+    <span class="k">if</span> <span class="n">verbiose</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> unique patterns found&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">patterns</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">patterns</span>
+
+<span class="k">def</span> <span class="nf">store_patterns</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">goal</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">patterns</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">bit</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">empty</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">goal</span><span class="p">):</span>
+        <span class="n">found</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">t</span> <span class="o">==</span> <span class="n">t</span><span class="o">.</span><span class="n">flatten</span><span class="p">()[</span><span class="n">t</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[</span><span class="o">-</span><span class="n">bit</span><span class="p">]]):</span>
+            <span class="n">N</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">pair</span>
+            <span class="n">sack</span> <span class="o">=</span> <span class="n">reconstruct</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+
+            <span class="c1"># terminate search if we are returning empty sets</span>
+            <span class="k">if</span> <span class="n">sack</span> <span class="o">==</span> <span class="nb">set</span><span class="p">():</span>
+                <span class="n">empty</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="k">break</span>
+
+            <span class="n">pattern</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">s</span><span class="p">)[</span><span class="nb">list</span><span class="p">(</span><span class="n">sack</span><span class="p">)])</span>
+            <span class="n">loss</span> <span class="o">=</span> <span class="n">B</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">pattern</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span> <span class="o">*</span>
+                            <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">pattern</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span>
+            <span class="k">if</span> <span class="n">loss</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">patterns</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">pattern</span><span class="p">,</span> <span class="n">loss</span><span class="p">])</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">goal</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">found</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">found</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="n">bit</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">empty</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">patterns</span>
+</code></pre></div>
 
               
             </article>
@@ -958,7 +1080,7 @@ Counter({170: 12, 280: 7})
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../SOLN_P1_Stock_Cutting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Knapsack Problem" rel="prev">
+        <a href="../P1_Stock_Cutting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Finding Good Patterns" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -967,14 +1089,14 @@ Counter({170: 12, 280: 7})
               <span class="md-footer__direction">
                 Previous
               </span>
-              The Knapsack Problem
+              Finding Good Patterns
             </div>
           </div>
         </a>
       
       
         
-        <a href="../SOLN_P3_Stock_Cutting/" class="md-footer__link md-footer__link--next" aria-label="Next: The Column Generation Method" rel="next">
+        <a href="../P3_Stock_Cutting/" class="md-footer__link md-footer__link--next" aria-label="Next: The Column Generation Method" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
