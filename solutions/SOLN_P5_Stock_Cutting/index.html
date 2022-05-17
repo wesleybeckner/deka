@@ -13,7 +13,7 @@
     
     
       
-        <title>SOLN P5 Stock Cutting - Deka</title>
+        <title>Edge Cases - Deka</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SOLN P5 Stock Cutting
+              Edge Cases
             
           </span>
         </div>
@@ -230,12 +230,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -289,6 +291,96 @@
       <a href="../SOLN_P3_Stock_Cutting/" class="md-nav__link">
         The Column Generation Method
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SOLN_P4_Stock_Cutting/" class="md-nav__link">
+        Unit Tests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Edge Cases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Edge Cases
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-import-functions-and-libraries" class="md-nav__link">
+    1.0: Import Functions and Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-we-need-to-limit-the-number-of-patterns-in-the-layouts" class="md-nav__link">
+    When we need to limit the number of patterns in the layouts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-we-need-to-limit-the-number-of-layouts-in-a-solution" class="md-nav__link">
+    When we need to limit the number of layouts in a solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-we-need-a-single-layout" class="md-nav__link">
+    When we need a single layout
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -971,6 +1063,7 @@ total doffs: 81
 <span class="n">q</span> <span class="o">=</span> <span class="p">[</span><span class="mi">879</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">181</span><span class="p">]</span>
 <span class="n">W</span> <span class="o">=</span> <span class="mi">4160</span>
 <span class="n">ans</span> <span class="o">=</span> <span class="mi">59</span>
+
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="n">make_best_pattern</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">widths</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">usable_width</span><span class="o">=</span><span class="n">W</span><span class="p">,</span> <span class="n">verbiose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
@@ -995,6 +1088,41 @@ inventory created: {168: 433, 232: 2, 156: 147}
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../SOLN_P4_Stock_Cutting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unit Tests" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Unit Tests
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../exercises/P1_Stock_Cutting/" class="md-footer__link md-footer__link--next" aria-label="Next: The Knapsack Problem" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              The Knapsack Problem
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
