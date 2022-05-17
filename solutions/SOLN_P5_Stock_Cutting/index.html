@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stock-cutting-part-5-edge-cases-and-api" class="md-skip">
+        <a href="#stock-cutting-part-5-edge-cases" class="md-skip">
           Skip to content
         </a>
       
@@ -350,29 +350,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#10-import-functions-and-libraries" class="md-nav__link">
-    1.0: Import Functions and Libraries
+  <a href="#1-import-functions-and-libraries" class="md-nav__link">
+    1: Import Functions and Libraries
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-we-need-to-limit-the-number-of-patterns-in-the-layouts" class="md-nav__link">
-    When we need to limit the number of patterns in the layouts
+  <a href="#2-when-we-need-to-limit-the-number-of-patterns-in-the-layouts" class="md-nav__link">
+    2: When we need to limit the number of patterns in the layouts
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-we-need-to-limit-the-number-of-layouts-in-a-solution" class="md-nav__link">
-    When we need to limit the number of layouts in a solution
+  <a href="#3-when-we-need-to-limit-the-number-of-layouts-in-a-solution" class="md-nav__link">
+    3: When we need to limit the number of layouts in a solution
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-we-need-a-single-layout" class="md-nav__link">
-    When we need a single layout
+  <a href="#4-when-we-need-a-single-layout" class="md-nav__link">
+    4: When we need a single layout
   </a>
   
 </li>
@@ -495,29 +495,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#10-import-functions-and-libraries" class="md-nav__link">
-    1.0: Import Functions and Libraries
+  <a href="#1-import-functions-and-libraries" class="md-nav__link">
+    1: Import Functions and Libraries
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-we-need-to-limit-the-number-of-patterns-in-the-layouts" class="md-nav__link">
-    When we need to limit the number of patterns in the layouts
+  <a href="#2-when-we-need-to-limit-the-number-of-patterns-in-the-layouts" class="md-nav__link">
+    2: When we need to limit the number of patterns in the layouts
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-we-need-to-limit-the-number-of-layouts-in-a-solution" class="md-nav__link">
-    When we need to limit the number of layouts in a solution
+  <a href="#3-when-we-need-to-limit-the-number-of-layouts-in-a-solution" class="md-nav__link">
+    3: When we need to limit the number of layouts in a solution
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-we-need-a-single-layout" class="md-nav__link">
-    When we need a single layout
+  <a href="#4-when-we-need-a-single-layout" class="md-nav__link">
+    4: When we need a single layout
   </a>
   
 </li>
@@ -536,14 +536,14 @@
                 
 
 <p><a href="https://colab.research.google.com/github/wesleybeckner/deka/blob/main/notebooks/solutions/SOLN_P5_Stock_Cutting.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a></p>
-<h1 id="stock-cutting-part-5-edge-cases-and-api">Stock Cutting Part 5:<br> Edge Cases and API<a class="headerlink" href="#stock-cutting-part-5-edge-cases-and-api" title="Permanent link">&para;</a></h1>
+<h1 id="stock-cutting-part-5-edge-cases">Stock Cutting Part 5:<br> Edge Cases<a class="headerlink" href="#stock-cutting-part-5-edge-cases" title="Permanent link">&para;</a></h1>
 <p><br></p>
 <hr />
 <p><br></p>
-<p>In this project notebook we'll be </p>
+<p>In this project notebook we'll be exploring edge cases. Specifically, how do we use the building blocks we've created so far to account for user restrictions on layouts and patterns.</p>
 <p><br></p>
 <hr />
-<h2 id="10-import-functions-and-libraries">1.0: Import Functions and Libraries<a class="headerlink" href="#10-import-functions-and-libraries" title="Permanent link">&para;</a></h2>
+<h2 id="1-import-functions-and-libraries">1: Import Functions and Libraries<a class="headerlink" href="#1-import-functions-and-libraries" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">linprog</span>
@@ -792,7 +792,7 @@ total doffs: 59
 4, Counter({172: 15, 236: 6, 160: 1})
 </code></pre></div>
 
-<h2 id="when-we-need-to-limit-the-number-of-patterns-in-the-layouts">When we need to limit the number of patterns in the layouts<a class="headerlink" href="#when-we-need-to-limit-the-number-of-patterns-in-the-layouts" title="Permanent link">&para;</a></h2>
+<h2 id="2-when-we-need-to-limit-the-number-of-patterns-in-the-layouts">2: When we need to limit the number of patterns in the layouts<a class="headerlink" href="#2-when-we-need-to-limit-the-number-of-patterns-in-the-layouts" title="Permanent link">&para;</a></h2>
 <p>let's suppose we want a solution that only has 2 patterns in any given layout. When using the column generation method we used <code>seed_patterns</code> to create the naive layouts:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">q</span> <span class="o">=</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
 <span class="n">widths</span> <span class="o">=</span> <span class="n">w</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
@@ -876,7 +876,7 @@ total doffs: 58
 </code></pre></div>
 
 <p>In this case, we actually get an answer that is better than the column generation method!</p>
-<h2 id="when-we-need-to-limit-the-number-of-layouts-in-a-solution">When we need to limit the number of layouts in a solution<a class="headerlink" href="#when-we-need-to-limit-the-number-of-layouts-in-a-solution" title="Permanent link">&para;</a></h2>
+<h2 id="3-when-we-need-to-limit-the-number-of-layouts-in-a-solution">3: When we need to limit the number of layouts in a solution<a class="headerlink" href="#3-when-we-need-to-limit-the-number-of-layouts-in-a-solution" title="Permanent link">&para;</a></h2>
 <p>When we need to limit the total number of layouts in a solution, we will have to make multiple calls to the linear programming step and compare the results of each call. </p>
 <p>Let's say we are not limited by the number of layouts per pattern. We would then want to send all permutations of the following to the linear programming step:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">widths</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span> <span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">170</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">158</span><span class="p">])]</span>
@@ -989,7 +989,7 @@ total doffs: 81
 46, Counter({236: 12, 172: 4, 160: 4})
 </code></pre></div>
 
-<h2 id="when-we-need-a-single-layout">When we need a single layout<a class="headerlink" href="#when-we-need-a-single-layout" title="Permanent link">&para;</a></h2>
+<h2 id="4-when-we-need-a-single-layout">4: When we need a single layout<a class="headerlink" href="#4-when-we-need-a-single-layout" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">make_best_pattern</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">usable_width</span><span class="o">=</span><span class="mi">4160</span><span class="p">,</span> <span class="n">verbiose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Creates the best possible pattern such that all orders are fullfilled in a single</span>
