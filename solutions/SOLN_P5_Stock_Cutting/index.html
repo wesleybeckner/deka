@@ -990,6 +990,47 @@ total doffs: 81
 </code></pre></div>
 
 <h2 id="4-when-we-need-a-single-layout">4: When we need a single layout<a class="headerlink" href="#4-when-we-need-a-single-layout" title="Permanent link">&para;</a></h2>
+<p>Sometimes, we may want to fullfill our order in a single layout. This problem is actually not as difficult to solve as the others, as the restriction to a single layout forces us to appropriate cuts such that the quantities ordered of each width are accurately reflected. In other words, if we want 1 width of 2, 2 widths of 3, and 1 width of 4 then our layout should as best as possible reflect a ratio of 1:2:1 between our products 2, 3, and 4. Let's code this up.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">widths</span> <span class="o">=</span> <span class="p">[</span><span class="mi">170</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">158</span><span class="p">]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">w</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">widths</span><span class="p">,</span><span class="n">n</span><span class="p">)]</span>
+<span class="n">q</span> <span class="o">=</span> <span class="p">[</span><span class="mi">879</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">181</span><span class="p">]</span>
+<span class="n">W</span> <span class="o">=</span> <span class="mi">4160</span>
+<span class="n">ans</span> <span class="o">=</span> <span class="mi">59</span>
+
+<span class="c1"># we will want there to be at least 1 cut of each width, i.e. max(1, calc)</span>
+<span class="c1"># calc: proportion_of_item_in_orders * quantity_of_item_that_can_fit_in_usable_width</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">W</span><span class="o">/</span><span class="n">j</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">w</span><span class="p">)]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>[16, 3, 3]
+</code></pre></div>
+
+<p>after we create this initial layout we will have to check that we did not go over the usable width, <code>W</code>, and if so remove any items that are closest or above their ratio in the order quantites, <code>q</code></p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">remainder</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">W</span><span class="o">/</span><span class="n">j</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">w</span><span class="p">)</span> <span class="p">]</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>[0.3033242973320043, 0.2983258812519498, -0.39110429447852724]
+</code></pre></div>
+
+<p><code>math.remainder(x, y)</code> will return the remainder of x - yn where yn is the closest integer to x. We can use this to determine which order quantities were rounded down the most from their ideal value.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># since we took the floor in the calculation for layout, the remainder</span>
+<span class="c1"># will tell us how much abov</span>
+<span class="n">remainder</span> <span class="o">=</span> <span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">remainder</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">W</span><span class="o">/</span><span class="n">j</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">remainder</span><span class="p">(</span><span class="n">i</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">W</span><span class="o">/</span><span class="n">j</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                                                        <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">w</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span>
+<span class="n">order</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">remainder</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>[-1, -1, -0.39110429447852724]
+
+
+
+array([0, 1, 2])
+</code></pre></div>
+
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">make_best_pattern</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">usable_width</span><span class="o">=</span><span class="mi">4160</span><span class="p">,</span> <span class="n">verbiose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Creates the best possible pattern such that all orders are fullfilled in a single</span>
